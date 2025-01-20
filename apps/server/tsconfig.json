@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "sourceMap": true
+  },
+  "references": [
+    {
+      "path": "../../packages/utils"
+    }
+  ]
+}

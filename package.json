@@ -1,0 +1,35 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "web": "pnpm --filter @template/web",
+    "server": "pnpm --filter @template/server",
+    "server:dev": "pnpm run server dev",
+    "server:build": "pnpm run server build",
+    "web:dev": "pnpm run web start",
+    "web:build": "pnpm run web build",
+    "dev": "concurrently --kill-others \"pnpm run server:dev\" \"pnpm run web:dev\"",
+    "build": "concurrently --kill-others \"pnpm run server:build\" \"pnpm run web:build\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.20.0",
+    "@typescript-eslint/parser": "^8.20.0",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.2",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "prettier": "^3.4.2",
+    "typescript": "~5.5.2",
+    "typescript-eslint": "8.18.0"
+  }
+}
