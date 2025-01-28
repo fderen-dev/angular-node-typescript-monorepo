@@ -11,7 +11,9 @@ export default tseslint.config(
     processor: angular.processInlineTemplates,
     settings: {
       "import/resolver": {
-        typescript: {},
+        typescript: {
+          project: ["./tsconfig.json"],
+        },
       },
     },
     rules: {

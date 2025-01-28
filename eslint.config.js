@@ -11,9 +11,4 @@ export default tseslint.config({
     tseslint.configs.recommended,
     eslintPluginPrettier,
   ],
-  settings: {
-    "import/resolver": {
-      typescript: {},
-    },
-  },
 });
