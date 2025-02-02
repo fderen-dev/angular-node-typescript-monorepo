@@ -1,7 +1,7 @@
-import eslint from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import eslint from "@eslint/js";
+import tseslint from "typescript-eslint";
 import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
-import importPlugin from 'eslint-plugin-import';
+import importPlugin from "eslint-plugin-import";
 
 export default tseslint.config({
   files: ["**/*.ts"],
@@ -11,4 +11,12 @@ export default tseslint.config({
     tseslint.configs.recommended,
     eslintPluginPrettier,
   ],
+  rules: {
+    "@typescript-eslint/explicit-member-accessibility": [
+      "error",
+      {
+        accessibility: "no-public",
+      },
+    ],
+  },
 });
