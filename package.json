@@ -7,12 +7,14 @@
   "scripts": {
     "web": "pnpm --filter @template/web",
     "server": "pnpm --filter @template/server",
+    "utils": "pnpm --filter @template/utils",
     "server:dev": "pnpm run server dev",
     "server:build": "pnpm run server build",
     "web:dev": "pnpm run web start",
     "web:build": "pnpm run web build",
-    "dev": "concurrently --kill-others \"pnpm run server:dev\" \"pnpm run web:dev\"",
-    "build": "concurrently --kill-others \"pnpm run server:build\" \"pnpm run web:build\""
+    "utils:build": "pnpm run utils build",
+    "dev": "pnpm run utils:build && concurrently --kill-others \"pnpm run server:dev\" \"pnpm run web:dev\"",
+    "build": "pnpm run utils:build && concurrently --kill-others \"pnpm run server:build\" \"pnpm run web:build\""
   },
   "keywords": [],
   "author": "",
